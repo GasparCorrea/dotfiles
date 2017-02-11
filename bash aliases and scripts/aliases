@@ -1,0 +1,17 @@
+export PS1="\[\e[199m\] Gaspar Octavio \[\e[m\]\[\e[129m\]\W\[\e[m\] "
+PATH=/home/gasparoctavio/Documents/Bash:"$PATH"
+
+# Aliases
+alias open='thunar'
+alias newcpp='. new_cpp.sh'
+alias newc='. new_c.sh'
+alias count='ls|cat -n |tail -n 1| awk '"'"'{ print $1}'"'"''
+alias uncompress='tar -xvzf'
+alias compress='tar -zcvf'
+alias vi3='sudo vim ~/.i3/config'
+alias vbash='vim ~/.bashrc'
+alias vbar='vim ~/.config/polybar/config'
+alias space_used='du -sh'
+alias nfetch='neofetch --image ~/Descargas/neofetch.jpg'
+alias hdmi_cards='pacmd list-cards | grep output\:'
+export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"

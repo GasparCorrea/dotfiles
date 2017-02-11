@@ -1,0 +1,8 @@
+! rofi settings
+ rofi.color-window:          #FBDAFF, #7A477F
+ rofi.color-normal:          #FBDAFF,#7A477F,#FBDAFF,#7A477F,#FFFFFF
+ rofi.color-urgent:          #FBDAFF,#FFB2B2,#FBDAFF,#7A477F,#FFFFFF
+ rofi.color-active:          #FBDAFF,#C272C1,#FBDAFF,#FFFFFF,#FBDAFF
+ rofi.color-enabled:         true
+ rofi.borderwidth:	     10
+ rofi.font:                  Inconsolata 11
