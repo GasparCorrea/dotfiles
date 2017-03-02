@@ -62,7 +62,7 @@ a:hover { color: #dc322f; }
 #searchbox {
   margin: 4px;
   padding: 8px;
-  background-color: #FBDAFF;
+  background-color: #FAFAFA;
   border: 5px solid #7A477F;
   -webkit-box-shadow: 1px 1px 10px 0px #000;
      -moz-box-shadow: 1px 1px 10px 0px #000;
@@ -89,7 +89,7 @@ a:hover { color: #dc322f; }
   -moz-box-flex: 1;
   margin: 4px;
   padding: 8px;
-  background-color: #FBDAFF;
+  background-color: #FAFAFA;
   border: 5px solid #7A477F;
   -webkit-box-shadow: 1px 1px 10px 0px #000;
      -moz-box-shadow: 1px 1px 10px 0px #000;

@@ -55,7 +55,8 @@ function parseCom(com) {
     // if the subreddit command is matched
     else if (/^reddit .*$/i.test(com)) {
       var sargs = com.split(" ");
-      nav("https://www.reddit.com/r/" + sargs.pop());
+      sargs.shift();
+      nav("https://www.reddit.com/r/" + (sargs.toString()).replace(/,/g," "));
     }
       // if anything else, search for it
       else if (urlPattern.test(com)){
@@ -72,7 +73,8 @@ function parseCom(com) {
     }
     else if (/^youtube .*$/i.test(com)) {
       var sargs = com.split(" ");
-      nav("https://www.youtube.com/results?search_query=" + sargs.pop());
+      sargs.shift();
+      nav("https://www.youtube.com/results?search_query=" + (sargs.toString()).replace(/,/g," ") );
     }
       else if (urlPattern.test(com)){
         nav(com);
@@ -90,7 +92,8 @@ function parseCom(com) {
     // if the search command is matched
     else if (/^torrent .*$/i.test(com)) {
       var sargs = com.split(" ");
-      nav("https://torrentz2.eu/search?f=" + sargs.pop());
+      sargs.shift();
+      nav("https://torrentz2.eu/search?f=" + (sargs.toString()).replace(/,/g," "));
     }
       // if anything else, search for it
       else if (urlPattern.test(com)){
