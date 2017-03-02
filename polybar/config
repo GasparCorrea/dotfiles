@@ -12,48 +12,70 @@ margin-top = 5
 margin-bottom = 5
 
 [bar/example]
+;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
 offset-x = 0
 offset-y = 0
+
+;background = ${xrdb:color9}
 background = ${colors.background}
 foreground = ${colors.foreground}
+
 overline-size = 2
 overline-color = #f00
-underline-size = 5
-underline-color = #00f
+underline-size = 0
+underline-color = #f00
+
 border-bottom-size = 0
 border-bottom-color = #333
+
 padding-left = 0
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
+
 font-0 = Inconsolata:pixelsize=15
 font-1 = FontAwesome:size=13;0
-modules-left = bspwm i3 xwindow
+font-2 = irohamaru mikami:pixelsize=18
+
+modules-left = bspwm i3
 modules-center = song
 modules-right = email date powermenu
+
 tray-position = right
 tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = bspwm
 wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
 
 [module/xwindow]
 type = custom/script
-exec = ~/.config/polybar/current.py
+exec = ~/.config/polybar/current.py 
 interval = 1
 
 [module/email]
 type = custom/script
-exec = ~/.config/polybar/email.py
+exec = ~/.config/polybar/email.py 
 interval = 5
 click-left = firefox -new-tab gmail.com
 
 [module/song]
 type = custom/script
-exec = ~/.config/polybar/song.py
+exec = ~/.config/polybar/song.py 
 interval = 1
 click-left = cmus-remote -u
-
 [module/cmus]
 type = custom/menu
 format-spacing = 1
@@ -78,52 +100,74 @@ label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
 [module/bspwm]
+type = internal/bspwm
+
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
+
 label-occupied = %index%
 label-occupied-padding = 2
+
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
+
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
+wrapping-scroll = false
+label-active-font = 3
 label-mode-padding = 2
 label-mode-foreground = #000
-label-focused = %index%
+label-mode-background = ${colors.primary}
+
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
-label-unfocused = %index%
-label-urgent = %index%!
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-foreground = #C271D4
 label-urgent-background = ${module/bspwm.label-urgent-background}
-label-visible = %index%
+
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 [module/date]
 type = internal/date
+interval = 5
+
 date =" %d/%m/%Y"
 time = %H:%M
 format-prefix = 
+
 format-prefix-foreground = ${colors.foreground-alt}
 label = %date% %time%
 
 [module/powermenu]
 type = custom/menu
+
 format-spacing = 1
+
 label-open =  
 label-close =  
 label-separator = -
+
 menu-0-0 = 
 menu-0-0-exec = ~/.config/polybar/logout.sh
 menu-0-1 = 
 menu-0-1-exec = reboot
-menu-0-2 = 
-menu-0-2-exec = shutdown now
+menu-0-2 = 
+menu-0-2-exec = systemctl suspend
+menu-0-3 = 
+menu-0-3-exec = shutdown now
+

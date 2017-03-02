@@ -87,16 +87,16 @@ bindsym Mod1+Shift+minus move scratchpad
 bindsym Mod1+minus scratchpad show
 
 # switch to workspace
-bindsym Mod1+1 workspace 1
-bindsym Mod1+2 workspace 2
-bindsym Mod1+3 workspace 3
-bindsym Mod1+4 workspace 4
-bindsym Mod1+5 workspace 5
-bindsym Mod1+6 workspace 6
-bindsym Mod1+7 workspace 7
-bindsym Mod1+8 workspace 8
-bindsym Mod1+9 workspace 9
-bindsym Mod1+0 workspace 10
+bindsym Mod1+1 workspace いち
+bindsym Mod1+2 workspace に
+bindsym Mod1+3 workspace さん
+bindsym Mod1+4 workspace し
+bindsym Mod1+5 workspace ご
+bindsym Mod1+6 workspace ろく
+bindsym Mod1+7 workspace しち
+bindsym Mod1+8 workspace はち
+bindsym Mod1+9 workspace きゅう
+bindsym Mod1+0 workspace じゅう
 
 # move focused container to workspace
 bindsym Mod1+Shift+1 move container to workspace 1
@@ -113,7 +113,7 @@ bindsym Mod1+Shift+0 move container to workspace 10
 # reload the configuration file
 bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym Mod1+Shift+r restart
+bindsym Mod1+Shift+r exec /home/gasparoctavio/Documentos/Bash/restart.sh
 # exit i3 (logs you out of your X session)
 bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
