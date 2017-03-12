@@ -8,6 +8,16 @@ h3 {
 /* -------------------------------------------------------------------
   BASE
 ---------------------------------------------------------------------- */
+button {
+    background-color: #FBDAFF; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
 body {
   background-color: #FBDAFF;
@@ -20,6 +30,19 @@ h3 {
   display: inline;
   padding-bottom: 5px;
   font-size: 1em;
+}
+
+ul {
+  font-size: 20px;
+  list-style: none;    
+  color: #2aa198;
+      
+}
+
+li:before {
+    content: ">"; /* Insert content that looks like bullets */
+    padding-right: 8px;
+    color: #0B0B61; /* Or a color you prefer */
 }
 
 a, a:visited {
@@ -49,13 +72,13 @@ a:hover { color: #dc322f; }
 ---------------------------------------------------------------------- */
 
 #container {
-  position: absolute;
-  top: 15%;
+
+  top: 13%;
   left: 0;
   right: 0;
   margin: 0 auto;
   padding: 0 20px;
-  width: 1000px;
+  width: 961px;
   height: auto;
 }
 
@@ -70,7 +93,9 @@ a:hover { color: #dc322f; }
 }
 
 #image {
-  margin: 4px;  
+  margin: 4px;
+    width: 490px;
+    height: 490px;
   background-color: #7A477F;
   border: 5px solid #7A477F;
   -webkit-box-shadow: 1px 1px 10px 0px #000;
@@ -79,6 +104,15 @@ a:hover { color: #dc322f; }
 }
 
 #links {
+  display: -moz-box;
+  display: -webkit-box;
+  width: 100%;
+}
+
+pre {
+  font-size: 15px;
+  font-family: "Inconsolata", monospace;
+  color: #2aa198;
   display: -moz-box;
   display: -webkit-box;
   width: 100%;
@@ -112,4 +146,53 @@ input 	{
   color: #7A477F;
   font-size: 1em;
   font-weight: bold;
+}
+
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front{
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.back {
+	backface-visibility: hidden;
+    font-size: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }
