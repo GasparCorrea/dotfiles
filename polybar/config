@@ -1,24 +1,21 @@
 [colors]
 background = #00FFFFFF
 background-alt = #00FBDAFF
-foreground = #7A477F
+foreground = #40370E
 foreground-alt = #55
 primary = #7A477F
 secondary = #e60053
 alert = #bd2c40
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 5000
+margin-bottom = 500
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
 offset-x = 0
 offset-y = 0
-
-;background = ${xrdb:color9}
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -42,23 +39,7 @@ font-2 = irohamaru mikami:pixelsize=18
 modules-left = bspwm i3
 modules-center = song
 modules-right = email date powermenu
-
-tray-position = right
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
 wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
 
 [module/xwindow]
 type = custom/script
@@ -133,7 +114,7 @@ label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
-label-unfocused-foreground = #C271D4
+label-unfocused-foreground = #7F6E1D
 label-urgent-background = ${module/bspwm.label-urgent-background}
 
 label-urgent-padding = ${module/bspwm.label-urgent-padding}

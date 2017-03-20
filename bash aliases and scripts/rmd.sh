@@ -1,2 +1,2 @@
 #!/bin/bash
-pandoc $1 | lynx -stdin
+pandoc $1 | lynx -stdin  -nocolor
