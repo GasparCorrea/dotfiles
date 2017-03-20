@@ -1,8 +1,9 @@
 ! rofi settings
- rofi.color-window:          #FBDAFF, #7A477F
- rofi.color-normal:          #FBDAFF,#7A477F,#FBDAFF,#7A477F,#FFFFFF
- rofi.color-urgent:          #FBDAFF,#FFB2B2,#FBDAFF,#7A477F,#FFFFFF
- rofi.color-active:          #FBDAFF,#C272C1,#FBDAFF,#FFFFFF,#FBDAFF
+ rofi.color-window:          #FFEA67, #403A1A
+ rofi.color-normal:          #FFEA67,#403A1A,#FFEA67,#403A1A,#FFFFFF
+ rofi.color-urgent:          #FFEA67,#FFB2B2,#FFEA67,#403A1A,#FFFFFF
+ rofi.color-active:          #FFEA67,#C272C1,#FFEA67,#FFFFFF,#FFEA67
  rofi.color-enabled:         true
  rofi.borderwidth:	     10
  rofi.font:                  Inconsolata 11
+
