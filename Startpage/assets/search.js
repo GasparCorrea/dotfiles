@@ -39,7 +39,7 @@ var handy_urls = {
 };
 
 function parseCom(com) {
-    var match = /([A-Za-z0-9]+)(?: (.+))/g;
+    var match = /([A-Za-z0-9]+)(?: (.+))?/g;
     var result = match.exec(com);
     if(com in handy_urls){
 	nav(handy_urls[com]);

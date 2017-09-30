@@ -12,50 +12,53 @@
   <body>
     <button id="authorize-button" style=></button>
     <button id="signout-button" style="display: none;"></button>  
-    <div id="container">
+    <div id="mycontainer">
       <div id="searchbox">
-          <h3><span class="blue">Gaspar Octavio </span><span class="magenta"> </span></h3>
           <input type="text" id="search" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" spellcheck="false" placeholder="" onkeypress="searchKeyPress(event)"></input>
       </div>
-      <div id="links">
-        <div class="box">
-            <h3><span class="magenta">> <span class="green">general</span></h3>
+      <div id="mylinks">
+        <div class="column mybox">
+            <h3><span class="magenta"><span class="green">> general</span></h3>
             <a href="https://mail.google.com/">gmail</a>
             <a href="https://facebook.com/">facebook</a>    
+	    <a href="https://www.sharelatex.com/project">sharelatex</a>
             <a href="https://www.youtube.com">youtube</a>
             <a href="https://www.reddit.com">reddit</a>
             <a href="https://web.telegram.org">telegram</a>
             </div>
-        <div class="box">
-            <h3><span class="magenta">> <span class="green">university</span></h3>
+        <div class="mybox">
+            <h3><span class="magenta"><span class="green">> university</span></h3>
             <a href="https://mail.google.com/mail/u/1/#inbox">mail/sansano</a>    
             <a href="https://zimbra.alumnos.inf.utfsm.cl/">mail/informatica</a>
             <a href="https://aula.usm.cl/">aula</a>
             <a href="https://moodle.inf.utfsm.cl">moodle</a>
             <a href="https://ocw.mit.edu/index.htm">mit</a>
-	        <a href="http://oyc.yale.edu/">open yale</a>
-	        <a href="https://www.edx.org/">edx</a>
+	    <a href="http://oyc.yale.edu/">open yale</a>
+	    <a href="https://www.edx.org/">edx</a>
+	    <a href="http://tutorial.math.lamar.edu/">math notes</a>
         </div>
-        <div class="box">
-            <h3><span class="magenta">> <span class="green">pirate booty</span></h3>
+        <div class="mybox">
+            <h3><span class="magenta"> <span class="green">> pirate booty</span></h3>
             <a href="https://www.yts.ag">yify</a>
             <a href="https://torrentz2.eu/">torrentz</a>
             <a href="https://www.thepiratebay.org">the pirate bay</a>
             <a href="https://fitgirl-repacks.site/">fitgirl</a>
-            <a href="https://nyaa.se/">nyaa</a>    
+            <a href="https://anidex.info/">anidex</a>    
+	    <a href="https://nyaa.si/">nyaa</a> 
             <a href="https://www.reddit.com/r/CrackWatch/">/r/CrackWatch</a>
         </div>
-        <div class="box">
-            <h3><span class="magenta">> <span class="green">nerd</span></h3>
+        <div class="mybox">
+            <h3><span class="magenta"><span class="green">> nerd</span></h3>
             <a href="https://github.com/">github</a>
             <a href="http://www.mlcjapanese.co.jp/">japanese</a>
-                <a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">/yt/Computerphile</a>
+            <a href="https://inmanga.com/">manga</a>
+	    <a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">/yt/Computerphile</a>
             <a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw">/yt/3Blue1Brown</a>
             
         </div>
       </div>
-      <div id="links">
-        <div class="box">
+      <div id="mylinks">
+        <div class="mybox">
           <h3><span class="magenta">> <span class="green">Upcoming Events</span></h3>
           <ul id="content"></ul>
         </div>
@@ -179,8 +182,12 @@
           'orderBy': 'startTime'
         }).then(function(response) {
           var events = response.result.items;
+	  var max = 19;
+	  if ( max>events.length){
+	  	max = event.length;
+	  }
           if (events.length > 0) {
-            for (i = 0; i < events.length; i++) {
+            for (i = 0; i < max; i++) {
               var event = events[i];
               var when = event.start.dateTime;
               if (!when) {
@@ -193,7 +200,9 @@
                      month = when[1];
                      day = when[2];
               appendPre( day+"/"+month+"    "+event.summary);
-                    }
+	    }else{
+	    	max = max +1;
+	    }
             }
           } else {
             appendPre('No upcoming events found.');

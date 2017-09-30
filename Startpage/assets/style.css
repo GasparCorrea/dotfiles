@@ -6,7 +6,7 @@ h3 {
 }
 
 button {
-    background-color: #FFEA67;
+    background-color: #FDF6E3;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -17,7 +17,7 @@ button {
 }
 
 body {
-  background-color: #FFEA67;
+  background-color: #FDF6E3;
   color: #EDEDED;
   font-family: "Inconsolata", monospace;
   font-size: 15px;
@@ -39,7 +39,7 @@ ul {
 li:before {
     content: ">";
     padding-right: 8px;
-    color: #0B0B61; 
+    color: #268BD2; 
 }
 
 a, a:visited {
@@ -55,10 +55,10 @@ a:hover { color: #dc322f; }
   COLOURS
 ---------------------------------------------------------------------- */
 
-.blue     {	color: #40370E; }
+.blue     {	color: #7F7534; }
 .cyan     { color: #2aa198; }
-.green    { color: #0B0B61; }
-.magenta  { color: #000000; }
+.green    { color: #2aa198; }
+.magenta  { color: #FDF6E3; }
 .orange   { color: #cb4b16; }
 .red      { color: #dc322f; }
 .violet   { color: #6c71c4; }
@@ -66,7 +66,7 @@ a:hover { color: #dc322f; }
 
 
 
-#container {
+#mycontainer {
 
   top: 13%;
   left: 0;
@@ -80,8 +80,8 @@ a:hover { color: #dc322f; }
 #searchbox {
   margin: 4px;
   padding: 8px;
-  background-color: #FAFAFA;
-  border: 5px solid #40370E;
+  background-color: #FDF6E3;
+  border: 5px solid #268BD2;
   -webkit-box-shadow: 1px 1px 10px 0px #000;
      -moz-box-shadow: 1px 1px 10px 0px #000;
           box-shadow: 1px 1px 10px 0px #000;
@@ -91,39 +91,31 @@ a:hover { color: #dc322f; }
   margin: 4px;
     width: 490px;
     height: 490px;
-  background-color: #40370E;
-  border: 5px solid #40370E;
+  background-color: #268BD2;
+  border: 5px solid #268BD2;
   -webkit-box-shadow: 1px 1px 10px 0px #000;
      -moz-box-shadow: 1px 1px 10px 0px #000;
           box-shadow: 1px 1px 10px 0px #000;
 }
 
-#links {
+#mylinks {
   display: -moz-box;
   display: -webkit-box;
   width: 100%;
 }
 
-pre {
-  font-size: 15px;
-  font-family: "Inconsolata", monospace;
-  color: #2aa198;
-  display: -moz-box;
-  display: -webkit-box;
-  width: 100%;
-}
 
-.box {
+
+.mybox {
     margin: 4px;
   padding: 8px;
-  background-color: #FAFAFA;
-  border: 5px solid #40370E;
+  background-color: #FDF6E3;
+  border: 5px solid #268BD2;
   -webkit-box-shadow: 1px 1px 10px 0px #000;
   -moz-box-shadow: 1px 1px 10px 0px #000;
        box-shadow: 1px 1px 10px 0px #000;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
-
   }
 
 
@@ -136,7 +128,7 @@ input 	{
   width: 50%;
   background: none;
   border: none;
-  color: #40370E;
+  color: #268BD2;
   font-size: 1em;
   font-weight: bold;
 }
